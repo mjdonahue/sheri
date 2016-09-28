@@ -104,7 +104,7 @@ var TopNav = React.createClass({
             <DropDownMenu underlineStyle={{ borderColor: '#fff' }} value={this.props.selectedOrg} onChange={this.handleOrgChange}>
               {
                 this.props.organizations.map(org => (
-                  <MenuItem value={org.id} primaryText={org.name}/>
+                  <MenuItem key={org.id} value={org.id} primaryText={org.name}/>
                 ))
               }
             </DropDownMenu>
